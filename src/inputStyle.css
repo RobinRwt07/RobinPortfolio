@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind utilities; 
+@tailwind components;
+
+/* add google font */
+
+
+/* these are tailwind at-rule or directive which are used to add utilities of tailwind to css files */
+
+@layer components{
+    .link-style{
+        @apply relative font-semibold hover:text-lava hover:after:absolute hover:after:w-full hover:after:h-[3px] hover:after:bg-lava hover:after:left-0 hover:after:-bottom-2 hover:after:z-10 
+        
+    }
+
+    .link-style:hover::after{
+        animation: line .5s ease-out;
+    }
+    @keyframes line {
+        0%{
+            width: 0;
+        }
+        100%{
+            width:100%;
+        }
+        
+    }
+    
+    .button-style{
+        @apply rounded-full px-3 py-2 text-center bg-darkBlue text-snow hover:text-lava
+    }
+    .card{
+        @apply rounded-xl;
+    }
+
+    .ball-before{
+        @apply before:w-[25px] before:h-[25px] before:absolute before:bg-lava before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 before:left-1/2
+    }
+
+    .ball-after{
+        @apply after:w-[25px] after:h-[25px] after:absolute after:bg-lava after:rounded-full after:-translate-x-1/2 after:translate-y-1/2 after:left-1/2 after:bottom-0
+    }
+
+    .edu-card{
+        @apply relative p-4 bg-darkBlue rounded-2xl flex flex-col gap-3 text-snow  
+
+        before:absolute before:top-1/2  before:border-t-[25px] before:border-t-transparent
+        before:border-r-[50px] before:border-r-darkBlue 
+        before:border-b-[25px] before:border-b-transparent
+        before:-translate-y-1/2 before:-z-10
+        before:-left-5 md:before:-left-9
+    }
+
+    .card-item{
+        @apply flex justify-between gap-2 font-semibold flex-wrap text-lava
+    }
+    .skill-card{
+        @apply p-2 flex flex-col  items-center  bg-grey rounded-xl shadow-lg
+    }
+       
+}

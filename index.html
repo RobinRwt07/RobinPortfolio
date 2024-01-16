@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Assest/favicon.png" type="image/png" sizes="16*16">
+    <link rel="stylesheet" href="src/style.css">
+
+    <!-- link google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;800&display=swap"
+        rel="stylesheet">
+
+    <title>Robin's Portfolio</title>
+</head>
+
+<body>
+    <main class="max-w-screen-2xl mx-auto">
+        <!-- front page section -->
+        <section id="home" class="">
+            <header class="">
+                <nav class="relative bg-lightGrey p-3 flex flex-col gap-6 md:flex-row md:justify-between md:items-center">
+                    <div id="open-menu" class=" w-8 h-8 absolute right-4 top-4 transition-transform hover:rotate-180 md:hidden">
+                        <img src="Assest/icons8-menu.svg" alt="menu_open_button">
+                    </div>
+                    <div id="close-menu" class="hidden w-7 h-7 absolute right-4 top-4 transition-transform hover:rotate-180 md:hidden">
+                        <img src="Assest/icons8-close.svg" alt="menu_close_button">
+                    </div>
+
+                    <div id="logo" class="min-w-28">
+                        <img src="Assest/Screenshot_2024-01-11_234011-removebg-preview.png" alt="Portfolio Logo"
+                            width="150" height="100">
+                    </div>
+                    <ul id="nav-bar" class="hidden md:flex flex-col gap-4 text-sm *:text-darkVoid *:text-center md:flex-row">
+                        <li><a class="link-style" href="#home">HOME</a></li>
+                        <li><a class="link-style" href="#About">ABOUT</a></li>
+                        <li><a class="link-style" href="#eduction">EDUCATION</a></li>
+                        <li><a class="link-style" href="#projects">PROJECTS</a></li>
+                        <li><a class="link-style" href="#skills">SKILLS</a></li>
+                        <li><a class="link-style" href="#contact">CONTACT</a></li>
+                    </ul>
+                    <button class="min-w-7  max-md:absolute max-md:top-5 max-md:right-16">
+                        <img src="Assest/2205209_bright_day_light_sun_icon.svg" alt="ligth-dark button"                        width="30px" height="30px">
+                    </button>
+                </nav>
+            </header>
+
+            <div class="p-4 flex flex-col md:flex-row-reverse md:items-center md:p-6 ">
+                <div class="mx-2 sm:w-[80%] sm:mx-auto md:w-[45%] md:shrink-0 ">
+                    <svg id="sw-js-blob-svg" viewBox="30 45 125 110">
+                        <defs>
+                            <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
+                                <stop id="stop1" stop-color="rgba(248, 117, 55, 1)" offset="0%"></stop>
+                                <stop id="stop2" stop-color="rgba(251, 168, 31, 1)" offset="100%"></stop>
+                            </linearGradient>
+                        </defs>
+                        <mask id="mask1" mask-type="alpha">
+
+                            <path fill="url(#sw-gradient)"
+                                d="M50.1,-17C55.4,0.2,43.8,22.2,24.6,36.9C5.4,51.5,-21.4,58.9,-41,46.9C-60.6,34.9,-73,3.6,-65,-17.3C-57,-38.2,-28.5,-48.6,-3.1,-47.6C22.4,-46.6,44.7,-34.2,50.1,-17Z"
+                                transform="translate(100 100)" />
+
+                        </mask>
+                        <g mask="url(#mask1)">
+                            <path fill="url(#sw-gradient)"
+                                d="M50.1,-17C55.4,0.2,43.8,22.2,24.6,36.9C5.4,51.5,-21.4,58.9,-41,46.9C-60.6,34.9,-73,3.6,-65,-17.3C-57,-38.2,-28.5,-48.6,-3.1,-47.6C22.4,-46.6,44.7,-34.2,50.1,-17Z"
+                                transform="translate(100 100)" />
+                            <image clip-path="url(#clip-path)"
+                                xlink:href="Assest/3d-casual-life-young-man-with-phone-using-laptop.png" alt="Image"
+                                height="100%" width="100%" x="20" y="60" class="svg__image">
+                        </g>
+                    </svg>
+                </div>
+
+                <div class="flex flex-col gap-2 md:mt-6">
+                    <p class="text-2xl font-semibold md:text-4xl">Hi,&#128075; </p>
+                    <p class="text-4xl font-bold md:text-6xl">I am <span class="text-lava"> Robin</span></p>
+                    <p class="text-slateGret text-2xl font-semibold md:text-3xl">Web Developer</p>
+                    <p class="my-4 font-semibold">Focused and enthusiastic developer with a keen interest in software development and web development. </p>
+
+                    <a href="https://drive.google.com/file/d/1eRLOTfbYCc62wPhBntBQLd-x3gsOUImG/view?usp=drivesdk" target="_blank" download="Robin's Resume"
+                        class="button-style self-center my-3 md:self-start">Download
+                        Resume</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-4 md:p-6 bg-[#E6F4FE]" id="About">
+            <h2 class="text-4xl text-center font-bold my-4 ">About Me</h2>
+            <div class="rounded-xl md:px-3">
+                <p class="text-justify ">
+                    Hey, I'm Robin Singh —a web enthusiast and student. I turn ideas into web realities. Currently studying MCA at Uttaranchal University, Dehradun. I've set out on a journey to blend my academic pursuits with hands-on experience in creating impactful digital solutions. I not only have a strong understanding of the fundamentals of computer science and am proficient in languages like HTML, CSS, and JavaScript, but I also create captivating and easy-to-use web designs that ensure a smooth user experience. Also, my skills extend to dynamic web development tools like PHP, enabling me to create interactive and responsive web applications. I'm also knowledgeable in Java, using its strength for backend development, constructing comprehensive web solutions that are both functional and visually appealing by combining skills from the front-end and back-end. you're invited to join me on this educational journey where coding meets creativity, and each challenge is a stepping stone toward growth.
+                  
+                </p>
+                <div class="my-4 flex flex-col gap-6">
+                    <h2 class="w-fit border-b-4 border-b-lava font-semibold self-center">Connect With Me</h2>
+
+                    <div class="social-media-links flex flex-row justify-center gap-4">
+                        <a href="https://in.linkedin.com/in/robin-singh-762359220" class=" hover:scale-110"
+                            title="_blank">
+                            <img src="Assest/icon-linkedin.svg" alt="Robin Linkedin">
+                        </a>
+                        <a href="https://github.com/RobinRwt07" target="_blank" class=" hover:scale-110">
+                            <img src="Assest/icon-github.svg" alt="Github link">
+                        </a>
+                        <a href="https://twitter.com/Robin_Rawat05" target="_blank" class=" hover:scale-110">
+                            <img src="Assest/icon-twitter.svg" alt="twitter link">
+                        </a>
+                        <a href="https://www.instagram.com/robin.rawat012" target="_blank" class=" hover:scale-110">
+                            <img src="Assest/icon-instagram.svg" alt="instagram link">
+                        </a>
+                        <a href="mailto:robbyrawat983@gmail.com" target="_blank" class=" hover:scale-110">
+                            <img src="Assest/icons-mail.svg" alt="mail">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="eduction" class="px-4 py-6 mb-4">
+            <h2 class="text-4xl font-bold text-center my-6">Education</h2>
+
+            <div class="relative flex flex-col gap-6 pl-6 pt-4 md:px-10 sm:w-4/5 sm:mx-auto md:w-3/4 md:gap-8">
+                <!-- stick -->
+                <div class="ball-before ball-after absolute h-full w-[5px] bg-gluonGrey left-0 "></div>
+                <div class="edu-card">
+                    <div class="card-item">
+                        <h2>Master Of Computer Applications</h2>
+                        <span>CGPA: 8.0</span>
+                    </div>
+                    <p>2022-2024</p>
+                    <p>Uttaranchal University</p>
+                    <p>Dehradun, Uttarakhand</p>
+                </div>
+                <div class="edu-card">
+                    <div class="card-item">
+                        <h2>Bachelor Of Computer Applications</h2>
+                        <span>CGPA: 7.8</span>
+                    </div>
+                    <p>2019-2022</p>
+                    <p>Himalayan Institute of Technology</p>
+                    <p>Dehradun, Uttarakhand</p>
+                </div>
+                <div class="edu-card">
+                    <div class="card-item">
+                        <h2>Senior Secondary School</h2>
+                        <span>Percentile: 66</span>
+                    </div>
+                    <p>2017-2018</p>
+                    <p>GIC Pokhrikhet</p>
+                    <p>Pauri Garhwal, Uttarakhand</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="p-4 md:p-6 bg-[#F4FAFF]">
+            <div>
+                <h1 class="text-4xl font-bold text-center my-4">My Projects </h1>
+                <p class="text-center font-medium my-4">Some of the projects that I worked on .....</p>
+            </div>
+            <div
+                class="py-4 grid gap-6 justify-center grid-cols-[repeat(auto-fill,minmax(250px,350px))] lg:w-4/5 lg:mx-auto lg:grid-cols-1 lg:gap-10">
+
+                <div class="flex flex-col rounded-3xl bg-teal *:text-snow lg:flex-row p-1">
+                    <div class="aspect-[2.3/2.5]">
+                        <img src="Assest/Screenshot (188).png" alt="Project photo"
+                            class="w-full h-full  rounded-t-3xl object-cover object-left md:rounded-3xl">
+                    </div>
+                    <div class="flex flex-col gap-2 p-3 lg:justify-center">
+                        <p class="text-lava">Weather Application</p>
+                        <p class="text-sm ">Weather Web Application—a sleek and intuitive platform designed to keep you
+                            in the know about the latest weather conditions.Effortlessly check real-time updates on
+                            temperature, wind, and more. Your go-to tool for staying ahead of the forecast. Experience
+                            weather tracking redefined. </p>
+
+                        <div>
+                            <h1>Technologies Used -</h1>
+                            <div class="flex justify-center gap-2 my-3 *:w-[50px] *:h-[50px]">
+                                <img src="Assest/icons8-html.svg" alt="html">
+                                <img src="Assest/icons8-javascript.svg" alt="JavaScript">
+                                <img src="Assest/css-3-svgrepo-com.svg" alt="CSS">
+                            </div>
+                        </div>
+                        <div class="flex justify-center gap-2 ">
+                            <a class="bg-lava text-darkBlue px-3 py-1 rounded-full hover:text-snow"
+                                href="https://github.com/RobinRwt07/Weather-web-application.git">Code</a>
+                            <a class="bg-lava text-darkBlue px-3 py-1 rounded-full hover:text-snow"
+                                href="https://robinrwt07.github.io/Weather-web-application/">Preview</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col rounded-3xl bg-teal *:text-snow lg:flex-row p-1">
+                    <div class="aspect-[2.3/2.5]">
+                        <img src="Assest/Screenshot (189).png" alt="Project photo"
+                            class="w-full h-full  rounded-t-3xl object-cover object-left md:rounded-3xl">
+                    </div>
+                    <div class="flex flex-col gap-2 p-3 lg:justify-center">
+                        <p class="text-lava">Digi-Library</p>
+                        <p class="text-sm">Digital Library—a web-based haven designed for seamless reading. With
+                            features like login and logout, it offers a personalized touch to your literary journey.
+                            Explore a diverse collection, read or download at your convenience, and immerse yourself in
+                            the joy of literature. Whether on a desktop or mobile, the user-friendly interface ensures a
+                            smooth experience</p>
+
+                        <div>
+                            <h1>Technologies Used -</h1>
+                            <div class="flex justify-center gap-2 my-3 flex-wrap *:w-[50px] *:h-[50px]">
+                                <img src="Assest/icons8-html.svg" alt="html">
+                                <img src="Assest/icons8-javascript.svg" alt="JavaScript">
+                                <img src="Assest/css-3-svgrepo-com.svg" alt="CSS">
+                                <img src="Assest/php-svgrepo-com.svg" alt="php">
+                                <img src="Assest/mysql-logo-svgrepo-com.svg" alt="mysql">
+                            </div>
+                        </div>
+                        <div class="flex justify-center gap-2 ">
+                            <a class="bg-lava text-darkBlue px-3 py-1 rounded-full hover:text-snow"
+                                href="https://github.com/RobinRwt07/LMS.git">Code</a>
+                            <a class="bg-lava text-darkBlue px-3 py-1 rounded-full hover:text-snow"
+                                href="https://github.com/RobinRwt07/LMS.git">Preview</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <section id="skills" class="p-4 md:p-6">
+            <h1 class="text-4xl font-bold text-center my-4">My SKills</h1>
+
+            <div class="flex flex-col gap-8 p-4 md:flex-row">
+                
+                <div class="md:w-3/5 bg-lightGrey rounded-2xl p-2">
+                    <h2 class="text-2xl text-center font font-semibold my-4 text-lava">Technologies</h2>
+                    <div class="p-4 flex gap-8 flex-wrap items-center justify-center">
+                        <div class="skill-card">
+                            <img src="Assest/icons8-html.svg" alt="HTML">
+                            <p>HTML</p>
+                        </div>
+                        <div class="skill-card">
+                            <img src="Assest/css-3-svgrepo-com.svg" alt="CSS">
+                            <p>CSS</p>
+                        </div>
+                        <div class="skill-card">
+                            <img src="Assest/icons8-javascript.svg" alt="JavaScript">
+                            <p>JavaScript</p>
+                        </div>
+                        <div class="skill-card">
+                            <img src="Assest/icons8-java.svg" alt="Java">
+                            <p>Java</p>
+                        </div>
+                        <div class="skill-card">
+                            <img src="Assest/jquery-svgrepo-com (1).svg" alt="JQuery">
+                            <p>JQuery</p>
+                        </div>
+                        <div class="skill-card">
+                            <img src="Assest/mysql-logo-svgrepo-com.svg" alt="MySQL" width="96px" height="96px">
+                            <p>MySQL</p>
+                        </div>
+                        <div class="skill-card">
+                            <img src="Assest/tailwindcss-svg.svg" alt="TailWindCSS">
+                            <p>TailWind</p>
+                        </div>
+                        <div class="skill-card">
+                            <img src="Assest/php-svgrepo-com.svg" alt="PHP">
+                            <p>PHP</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="bg-lightGrey rounded-2xl p-2">
+                    <h2 class="text-2xl text-center font font-semibold my-4 text-lava">Tools</h2>
+                    <div class="p-4 flex gap-8 flex-wrap items-center justify-center">
+                        <div class="skill-card">
+                            <img src="Assest/github-142-svgrepo-com.svg" alt="Github">
+                            <p>Github</p>
+                        </div>
+                        <div class="skill-card">
+                            <img src="Assest/vscode-svgrepo-com.svg" alt="VsCode" >
+                            <p>VSCode</p>
+                        </div>
+                        <div class="skill-card">
+                            <img src="Assest/postman-icon-svgrepo-com.svg" alt="PostMan">
+                            <p>PostMan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class=" p-4 md:p-6 bg-[#F7F9FF]">
+            <h1 class="text-3xl font-bold text-center my-4">Feel Free to Connect With Me -</h1>
+            <div class="py-4 flex flex-col items-center gap-4 md:flex-row md:justify-evenly">
+                <div class="social-media-links flex flex-row justify-center gap-4">
+                    <a href="https://in.linkedin.com/in/robin-singh-762359220" class=" hover:scale-110"
+                        title="_blank">
+                        <img src="Assest/icon-linkedin.svg" alt="Robin Linkedin">
+                    </a>
+                    <a href="https://github.com/RobinRwt07" target="_blank" class=" hover:scale-110">
+                        <img src="Assest/icon-github.svg" alt="Github link">
+                    </a>
+                    <a href="https://twitter.com/Robin_Rawat05" target="_blank" class=" hover:scale-110">
+                        <img src="Assest/icon-twitter.svg" alt="twitter link">
+                    </a>
+                    <a href="https://www.instagram.com/robin.rawat012" target="_blank" class=" hover:scale-110">
+                        <img src="Assest/icon-instagram.svg" alt="instagram link">
+                    </a>
+                    <a href="mailto:robbyrawat983@gmail.com" target="_blank" class=" hover:scale-110">
+                        <img src="Assest/icons-mail.svg" alt="mail">
+                    </a>
+                </div>
+                <div class="text-lava font-semibold ">
+                    <p>Designed and Developed by Robin Singh</p>
+                    <p>Copyright &copy 2024</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- linking the script file -->
+    <script src="src/script.js" defer></script>
+</body>
+
+</html>
