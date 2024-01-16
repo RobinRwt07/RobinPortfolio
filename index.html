@@ -14,18 +14,34 @@
         rel="stylesheet">
 
     <title>Robin's Portfolio</title>
+
+    <script>
+        // It's best to inline this in `head` to avoid FOUC (flash of unstyled content) when changing pages or themes
+        if (
+            localStorage.getItem('color-theme') === 'dark' ||
+            (!('color-theme' in localStorage) &&
+                window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
 </head>
 
 <body>
-    <main class="max-w-screen-2xl mx-auto">
+    <main class="max-w-screen-2xl mx-auto bg-[#f5f4fe] dark:bg-darkBlue">
         <!-- front page section -->
         <section id="home" class="">
             <header class="">
-                <nav class="relative bg-lightGrey p-3 flex flex-col gap-6 md:flex-row md:justify-between md:items-center">
-                    <div id="open-menu" class=" w-8 h-8 absolute right-4 top-4 transition-transform hover:rotate-180 md:hidden">
+                <nav
+                    class="relative bg-lightGrey p-3 flex flex-col gap-5 md:flex-row  md:justify-between md:items-center dark:bg-transparent">
+                    <div id="open-menu"
+                        class=" w-9 h-9 absolute right-4 top-3 transition-transform hover:rotate-180 md:hidden">
                         <img src="Assest/icons8-menu.svg" alt="menu_open_button">
                     </div>
-                    <div id="close-menu" class="hidden w-7 h-7 absolute right-4 top-4 transition-transform hover:rotate-180 md:hidden">
+                    <div id="close-menu"
+                        class="hidden w-7 h-7 absolute right-4 top-4 transition-transform hover:rotate-180 md:hidden">
                         <img src="Assest/icons8-close.svg" alt="menu_close_button">
                     </div>
 
@@ -33,7 +49,8 @@
                         <img src="Assest/Screenshot_2024-01-11_234011-removebg-preview.png" alt="Portfolio Logo"
                             width="150" height="100">
                     </div>
-                    <ul id="nav-bar" class="hidden md:flex flex-col gap-4 text-sm *:text-darkVoid *:text-center md:flex-row">
+                    <ul id="nav-bar"
+                        class="hidden md:flex flex-col gap-4 text-sm  *:text-darkVoid *:text-center md:flex-row lg:gap-8 dark:*:text-snow">
                         <li><a class="link-style" href="#home">HOME</a></li>
                         <li><a class="link-style" href="#About">ABOUT</a></li>
                         <li><a class="link-style" href="#eduction">EDUCATION</a></li>
@@ -41,8 +58,19 @@
                         <li><a class="link-style" href="#skills">SKILLS</a></li>
                         <li><a class="link-style" href="#contact">CONTACT</a></li>
                     </ul>
-                    <button class="min-w-7  max-md:absolute max-md:top-5 max-md:right-16">
-                        <img src="Assest/2205209_bright_day_light_sun_icon.svg" alt="ligth-dark button"                        width="30px" height="30px">
+
+                    <button id="theme-toggle" type="button" 
+                        class="max-md:absolute max-md:top-4 max-md:right-16 hover:ring-2 hover:ring-lava focus:outline-none rounded-lg ">
+                        <svg  id="theme-toggle-dark-icon" class="w-7 h-7 hidden" fill="#F56E0F" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg   id="theme-toggle-light-icon" class="w-7 h-7 hidden" fill="#F56E0F" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
                     </button>
                 </nav>
             </header>
@@ -74,36 +102,48 @@
                     </svg>
                 </div>
 
-                <div class="flex flex-col gap-2 md:mt-6">
-                    <p class="text-2xl font-semibold md:text-4xl">Hi,&#128075; </p>
+                <div class="flex flex-col gap-2 md:mt-6 dark:dark-mode-text">
+                    <p class="text-2xl font-semibold md:text-4xl ">Hi,&#128075; </p>
                     <p class="text-4xl font-bold md:text-6xl">I am <span class="text-lava"> Robin</span></p>
-                    <p class="text-slateGret text-2xl font-semibold md:text-3xl">Web Developer</p>
-                    <p class="my-4 font-semibold">Focused and enthusiastic developer with a keen interest in software development and web development. </p>
+                    <p class="text-darkVoid text-2xl font-semibold md:text-3xl dark:dark-mode-text">Web Developer</p>
+                    <p class="my-4 font-semibold ">Focused and enthusiastic developer with a keen interest in software
+                        development and web development. </p>
 
-                    <a href="https://drive.google.com/file/d/1eRLOTfbYCc62wPhBntBQLd-x3gsOUImG/view?usp=drivesdk" target="_blank" download="Robin's Resume"
+                    <a href="https://drive.google.com/file/d/1eRLOTfbYCc62wPhBntBQLd-x3gsOUImG/view?usp=drivesdk"
+                        target="_blank" download="Robin's Resume"
                         class="button-style self-center my-3 md:self-start">Download
                         Resume</a>
                 </div>
             </div>
         </section>
 
-        <section class="p-4 md:p-6 bg-[#E6F4FE]" id="About">
+        <section class="p-4 md:p-6 bg-[#F9F9F8] dark:bg-[#021b45] dark:dark-mode-text" id="About">
             <h2 class="text-4xl text-center font-bold my-4 ">About Me</h2>
             <div class="rounded-xl md:px-3">
                 <p class="text-justify ">
-                    Hey, I'm Robin Singh —a web enthusiast and student. I turn ideas into web realities. Currently studying MCA at Uttaranchal University, Dehradun. I've set out on a journey to blend my academic pursuits with hands-on experience in creating impactful digital solutions. I not only have a strong understanding of the fundamentals of computer science and am proficient in languages like HTML, CSS, and JavaScript, but I also create captivating and easy-to-use web designs that ensure a smooth user experience. Also, my skills extend to dynamic web development tools like PHP, enabling me to create interactive and responsive web applications. I'm also knowledgeable in Java, using its strength for backend development, constructing comprehensive web solutions that are both functional and visually appealing by combining skills from the front-end and back-end. you're invited to join me on this educational journey where coding meets creativity, and each challenge is a stepping stone toward growth.
-                  
+                    Hi, I'm Robin Singh - a web enthusiast and student. I turn ideas into web realities. Currently
+                    studying MCA at Uttaranchal University, Dehradun. I've set out on a journey to blend my academic
+                    pursuits with hands-on experience in creating impactful digital solutions. I not only have a strong
+                    understanding of the fundamentals of computer science and am proficient in languages like HTML, CSS,
+                    and JavaScript, but I also create captivating and easy-to-use web designs that ensure a smooth user
+                    experience. Also, my skills extend to dynamic web development tools like PHP, enabling me to create
+                    interactive and responsive web applications. I'm also knowledgeable in Java, using its strength for
+                    backend development, constructing comprehensive web solutions that are both functional and visually
+                    appealing by combining skills from the front-end and back-end. you're invited to join me on this
+                    educational journey where coding meets creativity, and each challenge is a stepping stone toward
+                    growth.
+
                 </p>
                 <div class="my-4 flex flex-col gap-6">
-                    <h2 class="w-fit border-b-4 border-b-lava font-semibold self-center">Connect With Me</h2>
+                    <h2 class="w-fit border-b-4 border-b-lava font-semibold self-center ">Connect With Me</h2>
 
                     <div class="social-media-links flex flex-row justify-center gap-4">
                         <a href="https://in.linkedin.com/in/robin-singh-762359220" class=" hover:scale-110"
                             title="_blank">
                             <img src="Assest/icon-linkedin.svg" alt="Robin Linkedin">
                         </a>
-                        <a href="https://github.com/RobinRwt07" target="_blank" class=" hover:scale-110">
-                            <img src="Assest/icon-github.svg" alt="Github link">
+                        <a href="https://github.com/RobinRwt07" target="_blank" class=" hover:scale-110 ">
+                            <img src="Assest/icon-github.svg" alt="Github link" >
                         </a>
                         <a href="https://twitter.com/Robin_Rawat05" target="_blank" class=" hover:scale-110">
                             <img src="Assest/icon-twitter.svg" alt="twitter link">
@@ -119,12 +159,12 @@
             </div>
         </section>
 
-        <section id="eduction" class="px-4 py-6 mb-4">
-            <h2 class="text-4xl font-bold text-center my-6">Education</h2>
+        <section id="eduction" class="px-4 py-6 mb-6">
+            <h2 class="text-4xl font-bold text-center my-6 dark:dark-mode-text">Education</h2>
 
             <div class="relative flex flex-col gap-6 pl-6 pt-4 md:px-10 sm:w-4/5 sm:mx-auto md:w-3/4 md:gap-8">
                 <!-- stick -->
-                <div class="ball-before ball-after absolute h-full w-[5px] bg-gluonGrey left-0 "></div>
+                <div class="ball-before ball-after absolute h-full w-[5px] bg-darkVoid left-0 dark:bg-snow"></div>
                 <div class="edu-card">
                     <div class="card-item">
                         <h2>Master Of Computer Applications</h2>
@@ -155,15 +195,15 @@
             </div>
         </section>
 
-        <section id="projects" class="p-4 md:p-6 bg-[#F4FAFF]">
+        <section id="projects" class="p-4 md:p-6 bg-[#e3e7f3] dark:bg-[#021b45]">
             <div>
-                <h1 class="text-4xl font-bold text-center my-4">My Projects </h1>
-                <p class="text-center font-medium my-4">Some of the projects that I worked on .....</p>
+                <h1 class="text-4xl font-bold text-center my-4 dark:dark-mode-text">My Projects </h1>
+                <p class="text-center font-medium my-4 dark:dark-mode-text">Some of the projects that I worked on .....</p>
             </div>
             <div
                 class="py-4 grid gap-6 justify-center grid-cols-[repeat(auto-fill,minmax(250px,350px))] lg:w-4/5 lg:mx-auto lg:grid-cols-1 lg:gap-10">
 
-                <div class="flex flex-col rounded-3xl bg-teal *:text-snow lg:flex-row p-1">
+                <div class="flex flex-col rounded-3xl bg-teal *:text-snow lg:flex-row p-1 dark:bg-[#2C3C79]">
                     <div class="aspect-[2.3/2.5]">
                         <img src="Assest/Screenshot (188).png" alt="Project photo"
                             class="w-full h-full  rounded-t-3xl object-cover object-left md:rounded-3xl">
@@ -191,7 +231,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col rounded-3xl bg-teal *:text-snow lg:flex-row p-1">
+                <div class="flex flex-col rounded-3xl bg-teal *:text-snow lg:flex-row p-1 dark:bg-[#2C3C79]">
                     <div class="aspect-[2.3/2.5]">
                         <img src="Assest/Screenshot (189).png" alt="Project photo"
                             class="w-full h-full  rounded-t-3xl object-cover object-left md:rounded-3xl">
@@ -228,12 +268,12 @@
         </section>
 
         <section id="skills" class="p-4 md:p-6">
-            <h1 class="text-4xl font-bold text-center my-4">My SKills</h1>
+            <h1 class="text-4xl font-bold text-center my-4 dark:dark-mode-text">My SKills</h1>
 
             <div class="flex flex-col gap-8 p-4 md:flex-row">
-                
-                <div class="md:w-3/5 bg-lightGrey rounded-2xl p-2">
-                    <h2 class="text-2xl text-center font font-semibold my-4 text-lava">Technologies</h2>
+
+                <div class="md:w-2/3 bg-lightGrey rounded-2xl p-2 dark:bg-[#2C3C79]">
+                    <h2 class="text-2xl text-center font font-semibold my-4 text-lava ">Technologies</h2>
                     <div class="p-4 flex gap-8 flex-wrap items-center justify-center">
                         <div class="skill-card">
                             <img src="Assest/icons8-html.svg" alt="HTML">
@@ -271,7 +311,7 @@
                     </div>
                 </div>
 
-                <div class="bg-lightGrey rounded-2xl p-2">
+                <div class="bg-lightGrey rounded-2xl p-2 dark:bg-[#2C3C79]">
                     <h2 class="text-2xl text-center font font-semibold my-4 text-lava">Tools</h2>
                     <div class="p-4 flex gap-8 flex-wrap items-center justify-center">
                         <div class="skill-card">
@@ -279,7 +319,7 @@
                             <p>Github</p>
                         </div>
                         <div class="skill-card">
-                            <img src="Assest/vscode-svgrepo-com.svg" alt="VsCode" >
+                            <img src="Assest/vscode-svgrepo-com.svg" alt="VsCode">
                             <p>VSCode</p>
                         </div>
                         <div class="skill-card">
@@ -291,12 +331,11 @@
             </div>
         </section>
 
-        <section id="contact" class=" p-4 md:p-6 bg-[#F7F9FF]">
-            <h1 class="text-3xl font-bold text-center my-4">Feel Free to Connect With Me -</h1>
+        <section id="contact" class=" p-4 md:p-6 bg-[#e3e7f3] dark:bg-[#021b45]">
+            <h1 class="text-3xl font-bold text-center my-4 dark:dark-mode-text">Feel Free to Connect With Me -</h1>
             <div class="py-4 flex flex-col items-center gap-4 md:flex-row md:justify-evenly">
                 <div class="social-media-links flex flex-row justify-center gap-4">
-                    <a href="https://in.linkedin.com/in/robin-singh-762359220" class=" hover:scale-110"
-                        title="_blank">
+                    <a href="https://in.linkedin.com/in/robin-singh-762359220" class=" hover:scale-110" title="_blank">
                         <img src="Assest/icon-linkedin.svg" alt="Robin Linkedin">
                     </a>
                     <a href="https://github.com/RobinRwt07" target="_blank" class=" hover:scale-110">
@@ -312,7 +351,7 @@
                         <img src="Assest/icons-mail.svg" alt="mail">
                     </a>
                 </div>
-                <div class="text-lava font-semibold ">
+                <div class="text-lava font-semibold p-2 md:border-l-2 md:border-l-lava">
                     <p>Designed and Developed by Robin Singh</p>
                     <p>Copyright &copy 2024</p>
                 </div>
